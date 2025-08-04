@@ -7,11 +7,11 @@ def __check_list(input_data: list)-> None:
 
 
 def __check_list_not_empty(input_data: list)-> None:
-    assert len(input_data) != [], f'TypeError Ожидался тип данных int, получили {type(input_data)}'
+    assert len(input_data) != [], f'ValueError Ожидался не пустой список, получили {len(input_data)}'
 
 
 def __check_list_two_or_more_elements(input_data: list) -> None:
-    assert len(input_data) >= 2, f'TypeError Ожидался тип данных int, получили {type(input_data)}'
+    assert len(input_data) >= 2, f'ValueError Ожидался список не менее 2 элементов, получили {len(input_data)}'
 
 
 def __check_int(input_data: int)-> None:
@@ -173,6 +173,4 @@ def problem_N4(arr: list[int|float]) -> list:
 
 # Аналитическая сложность алгоритма O(n)= n
 # Временная сложность алгоритма О(t) от 2.00 e-05 до 5.72e-06
-
-
 
